@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Study Mode</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand-icon" aria-hidden="true">▶</div>
+    <div>
+      <h1>YouTube Study Mode</h1>
+      <p class="tagline">Keep learning. Reduce the rabbit holes.</p>
+    </div>
+  </header>
+
+  <section class="master-card">
+    <div>
+      <p class="eyebrow">STUDY SESSION</p>
+      <h2 id="masterStatus" aria-live="polite">Loading settings…</h2>
+      <p id="statusDescription" class="muted">Your preferences are being loaded.</p>
+    </div>
+    <label class="switch" aria-label="Turn Study Mode on or off">
+      <input id="studyMode" type="checkbox">
+      <span class="slider"></span>
+    </label>
+  </section>
+
+  <section class="filters">
+    <div class="section-heading">
+      <h2>Choose your filters</h2>
+      <span class="small-label">CUSTOMIZE</span>
+    </div>
+
+    <label class="filter-row">
+      <span><strong>Hide Shorts</strong><small>Remove Shorts shelves and links where detected</small></span>
+      <input id="hideShorts" type="checkbox">
+    </label>
+
+    <label class="filter-row">
+      <span><strong>Hide home feed</strong><small>Hide the video grid on YouTube Home</small></span>
+      <input id="hideHomeFeed" type="checkbox">
+    </label>
+
+    <label class="filter-row">
+      <span><strong>Hide suggested videos</strong><small>Hide the related-video sidebar while watching</small></span>
+      <input id="hideSidebar" type="checkbox">
+    </label>
+
+    <label class="filter-row">
+      <span><strong>Hide end-screen suggestions</strong><small>Reduce clickable video suggestions at the end</small></span>
+      <input id="hideEndScreen" type="checkbox">
+    </label>
+  </section>
+
+  <div id="notice" class="notice" role="status" aria-live="polite">Settings saved automatically.</div>
+  <p class="footnote">Filters only affect supported YouTube page elements. They may not catch every distracting video.</p>
+  <script src="popup.js"></script>
+</body>
+</html>

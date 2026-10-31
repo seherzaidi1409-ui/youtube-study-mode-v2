@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Study Mode",
+  "version": "2.0.0",
+  "description": "Customizable YouTube distraction filters for study sessions.",
+  "permissions": ["storage", "tabs"],
+  "action": {
+    "default_title": "YouTube Study Mode",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
